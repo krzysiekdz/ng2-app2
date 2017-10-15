@@ -6,33 +6,34 @@
 			<h2 class="alert alert-secondary">Tour of Heroes</h2>
 			<a class="btn btn-secondary" role="button" href="#" >Dashboard</a>
 			<a class="btn btn-secondary" role="button" href="#" >List</a>
+			<a class="btn btn-secondary" role="button" href="#" (click)="getBestHeroes()" >refresh</a>
 		</div>
 		<div class="col">
 		</div>
 	</div>
-	<div class="row">
-		<div class="col">
+	<div class="row" *ngIf="heroes">
+		<div class="col" *ngIf="heroes[0]">
 			<div class="hero-top-item alert alert-secondary">
-				<p>Magneta</p>
-				<p>340 points</p>
+				<p>{{heroes[0].name}} </p>
+				<p>{{heroes[0].points}} </p>
 			</div>
 		</div>
-		<div class="col">
+		<div class="col" *ngIf="heroes[1]">
 			<div class="hero-top-item alert alert-secondary">
-				<p>Magneta</p>
-				<p>340 points</p>
+				<p>{{heroes[1].name}} </p>
+				<p>{{heroes[1].points}} </p>
 			</div>
 		</div>
-		<div class="col">
+		<div class="col" *ngIf="heroes[2]">
 			<div class="hero-top-item alert alert-secondary">
-				<p>Magneta</p>
-				<p>340 points</p>
+				<p>{{heroes[2].name}} </p>
+				<p>{{heroes[2].points}} </p>
 			</div>
 		</div>
-		<div class="col">
+		<div class="col" *ngIf="heroes[3]">
 			<div class="hero-top-item alert alert-secondary">
-				<p>Magneta</p>
-				<p>340 points</p>
+				<p>{{heroes[3].name}} </p>
+				<p>{{heroes[3].points}} </p>
 			</div>
 		</div>
 	</div>
